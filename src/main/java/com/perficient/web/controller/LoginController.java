@@ -17,7 +17,11 @@ public class LoginController {
 	public String validateUser(@RequestParam("username") String username,
 			@RequestParam("pwd") String pwd, Model model) {
 		model.addAttribute("username", username);
-		return "itemsList";
+		if(pwd == ""){
+			return "itemsList";
+		} else {
+			return "index";
+		}
 	}
 
 }
