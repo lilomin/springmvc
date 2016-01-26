@@ -1,3 +1,6 @@
+<title>My Personal Site</title>
+<link rel="icon" href="${pageContext.request.contextPath}/resources/imgs/siteicon3.jpg"/>
+
 <!-- JS Resources -->
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/angular.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.12.0.min.js"></script>
