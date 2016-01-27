@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -15,7 +18,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
+        <li><a href="items1">资产列表</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -36,7 +39,18 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" data-toggle="modal" data-target="#myLoginModal">Sign In</a></li>
+        <li>
+        	<c:choose>
+        		<c:when test="${username != '' && username != null}">
+	        		<a href="#">${username}</a>
+        		</c:when>
+        		<c:otherwise>
+	        		<a href="#" data-toggle="modal" data-target="#myLoginModal">
+	        			Sign In
+	        		</a>
+        		</c:otherwise>
+        	</c:choose>
+        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Setting<span class="caret"></span></a>
           <ul class="dropdown-menu">
