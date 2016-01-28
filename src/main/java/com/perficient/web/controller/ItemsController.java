@@ -13,9 +13,12 @@ import com.perficient.pojo.Items;
 
 public class ItemsController implements Controller {
 
-	public ModelAndView handleRequest(HttpServletRequest arg0,
-			HttpServletResponse arg1) throws Exception {
-		
+	public ModelAndView handleRequest(HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		String username = null;
+		if(request.getSession().getAttribute("currentUser") != null){
+			username = request.getSession().getAttribute("currentUser").toString();
+		}
 		List<Items> itemsList = new ArrayList<Items>();
 		Items item = new Items();
 		item.setName("Apple iphone");
@@ -25,6 +28,7 @@ public class ItemsController implements Controller {
 		
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("itemsList", itemsList);
+		modelAndView.addObject("username", username);
 		modelAndView.setViewName("itemsList");
 		return modelAndView;
 	}
