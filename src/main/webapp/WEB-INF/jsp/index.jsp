@@ -7,15 +7,23 @@
 </head>
 <body>
 	<c:import url="page/header.jsp"></c:import>
-	<div class="index-container">
+	<!-- <div class="index-container">
 		<div class="index-header" id="content" tabindex="-1">
 	      <div class="container">
 	        <h1>组件</h1>
 	        <p>无数可复用的组件，包括字体图标、下拉菜单、导航、警告框、弹出框等更多功能。</p>
 	      </div>
 	    </div>
-	</div>
-	
+	</div> -->
+	<div class="bg-slider-wrapper">
+        <div class="flexslider bg-slider">
+            <ul class="slides">
+                <li class="slide slide-1"></li>
+               <!--  <li class="slide slide-2"></li>
+                <li class="slide slide-3"></li> -->
+            </ul>
+        </div>
+    </div>
 	<div id="myLoginModal" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
