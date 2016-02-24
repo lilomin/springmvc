@@ -50,6 +50,17 @@
 	    <artifactId>spring-orm</artifactId>
 	    <version>3.2.8.RELEASE</version>
 	</dependency>
+	<dependency>
+		<groupId>org.mybatis</groupId>
+		<artifactId>mybatis</artifactId>
+		<version>3.1.1</version>
+	</dependency>
+
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.28</version>
+	</dependency>
   </dependencies>
   
   <build>

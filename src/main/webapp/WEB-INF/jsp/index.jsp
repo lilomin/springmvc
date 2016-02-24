@@ -31,7 +31,7 @@
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        <h4 class="modal-title" id="gridSystemModalLabel">登录</h4>
 	      </div>
-		  <form action="login">
+		  <form action="login" method="post">
 		     <div class="modal-body">
 				<div class="container-fluid">
 				  <div class="form-group">
