@@ -2,13 +2,15 @@ package com.perficient.dao;
 
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import com.perficient.pojo.User;
 
-@Repository
 public interface UserMapper {
 	public List<User> getAllUser();
-	public User getUser(int id);
+	
+	@Select("SELECT * FROM user WHERE id = #{userId} ")
+	public User getUser(@Param("userId") String userId);
 	public int addUser(User user);
 }
