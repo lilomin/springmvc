@@ -81,6 +81,15 @@ body{
 	color: rgb(236, 105, 82);
 	background-color: #fff !important;
 }
+.nav.my-nav-font .open>a{
+	background-color: rgb(236, 105, 82);
+}
+.nav.my-nav-font .open>a:focus{
+	background-color: rgb(236, 105, 82);
+}
+.nav.my-nav-font>li>a:focus{
+	background-color: rgb(236, 105, 82);
+}
 .my-nav-font li a{
 	border-radius: 4px;
 }
