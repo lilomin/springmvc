@@ -6,6 +6,8 @@ public class User {
 	
 	private int id;
 	
+	private int age;
+	
 	private String name;
 	
 	private String password;
@@ -24,6 +26,14 @@ public class User {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 
 	public String getName() {
@@ -76,9 +86,10 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [name=" + name + ", password=" + password
-				+ ", uesrDetail=" + uesrDetail + ", brithday=" + brithday
-				+ ", picture=" + picture + ", email=" + email + "]";
+		return "User [id=" + id + ", age=" + age + ", name=" + name
+				+ ", password=" + password + ", uesrDetail=" + uesrDetail
+				+ ", brithday=" + brithday + ", picture=" + picture
+				+ ", email=" + email + "]";
 	}
 	
 }
