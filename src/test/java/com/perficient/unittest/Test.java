@@ -9,32 +9,38 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.perficient.pojo.User;
-import com.perficient.service.impl.FooServiceImpl;
+import com.perficient.service.impl.UserServiceImpl;
 
 public class Test {
 	private ApplicationContext ac = null;
 	
 	@Resource
-	private FooServiceImpl fService = null;
+	private UserServiceImpl userService = null;
 	
 	@Before
 	public void before(){
 		ac = new ClassPathXmlApplicationContext("spring/applicationContext-servlet.xml");
-		fService = (FooServiceImpl) ac.getBean("FooService");
+		userService = (UserServiceImpl) ac.getBean("UserService");
 	}
 	
 	@org.junit.Test
 	public void test1(){
-		User user = fService.doSomeBusniess(1);
+		User user = userService.getUser(1);
 		System.out.println(user.toString());
 	}
 	
 	@org.junit.Test
 	public void testGetAllUser(){
-		List<User> users = fService.getAllUsers();
+		List<User> users = userService.getAllUsers();
 		System.out.println(users.size());
 		for(User user: users){
 			System.out.println(user.toString());
 		}
+	}
+	
+	@org.junit.Test
+	public void testGetUserByName(){
+		User user = userService.getUserByName("raymond");
+		System.out.println(user.toString());
 	}
 }
