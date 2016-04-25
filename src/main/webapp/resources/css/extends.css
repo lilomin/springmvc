@@ -87,3 +87,10 @@ body{
 .navbar-header span.icon-bar{
 	background-color: #FFF;
 }
+.index-content{
+    position: absolute;
+    top: 315px;
+    height: 1000px;
+    width: 100%;
+    background-color: white;
+}

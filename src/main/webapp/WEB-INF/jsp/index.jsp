@@ -24,6 +24,9 @@
             </ul>
         </div>
     </div>
+    <!-- index page content -->
+    <c:import url="page/index-content.jsp"/>
+    
 	<div id="myLoginModal" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
