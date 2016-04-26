@@ -43,7 +43,7 @@
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form> -->
-			<ul class="nav navbar-nav navbar-right  my-nav-font">
+			<ul class="nav navbar-nav navbar-right  my-nav-font login">
 				<li><c:choose>
 						<c:when test="${username != '' && username != null}">
 							<a href="#">${username}</a>
