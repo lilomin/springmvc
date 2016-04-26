@@ -1,7 +1,5 @@
 package com.perficient.web.controller;
 
-import java.io.IOException;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -41,9 +39,7 @@ public class LoginController {
 				System.out.println("current:"+currentURL);
 				request.getSession().setAttribute("currentUser", username);
 				response.sendRedirect("items");
-				//return "itemsList";
 			} else {
-				//return "index";
 				response.sendRedirect("index");
 			}
 		} catch (Exception e) {
