@@ -93,11 +93,6 @@ body{
 .my-nav-font li a{
 	border-radius: 4px;
 }
-@media (min-width: 768px){
-	.navbar-right.my-nav-font.login{
-		margin-right: 15px;
-	}
-}
 .navbar-header span.icon-bar{
 	background-color: #FFF;
 }
@@ -106,5 +101,10 @@ body{
     top: 315px;
     height: 1000px;
     width: 100%;
-    background-color: rgba(45, 173, 179, 0.86);
+    background-color: rgba(245, 245, 245, 0.8);
+}
+@media (min-width: 768px){
+	.navbar-right.my-nav-font.login{
+		margin-right: 15px;
+	}
 }
