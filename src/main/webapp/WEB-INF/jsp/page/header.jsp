@@ -21,9 +21,9 @@
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav my-nav-font">
 				<li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
-				<li><a href="items1">LINKS</a></li>
-				<li><a href="items1">WORKSAMPLE</a></li>
-				<li><a href="items1">CONTACT</a></li>
+				<li><a href="#">LINKS</a></li>
+				<li><a href="#">WORKSAMPLE</a></li>
+				<li><a href="#">CONTACT</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">DROPDOWN <span class="caret"></span></a>

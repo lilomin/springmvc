@@ -25,12 +25,12 @@
     
     <mvc:resources mapping="/resources/**" location="/resources/"/>
     
-    <mvc:interceptors>
+    <!-- <mvc:interceptors>
     	<mvc:interceptor>
     		<mvc:mapping path="/**"/>
     		<bean id="loginInterceptor" class="com.perficient.interceptor.LoginInterceptor"/>
     	</mvc:interceptor>
-    </mvc:interceptors>
+    </mvc:interceptors> -->
     
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
