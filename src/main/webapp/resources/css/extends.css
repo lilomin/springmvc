@@ -1,6 +1,9 @@
 body{
 	font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
 }
+.index-body-content li{
+	list-style-type: none;
+}
 .index-container .index-header{
 	padding-top: 60px;
     padding-bottom: 60px;
