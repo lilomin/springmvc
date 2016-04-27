@@ -69,6 +69,12 @@ body{
 .navbar-collapse .nav.my-nav-font .active a{
 	color: rgb(236, 105, 82);
 }
+.navbar-collapse .nav.my-nav-font .active a:focus{
+	color: #FFFFFF;
+}
+.navbar-collapse .nav.my-nav-font .active a:focus:hover{
+	color: rgb(236, 105, 82);
+}
 .my-nav-font .signinbtn{
 	border: 1px solid #fff;
 	border-radius: 4px;
