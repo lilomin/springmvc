@@ -1,10 +1,16 @@
 var app = angular.module('RaymondSite', []);
 
-app.controller('indexCtrl', function($scope){
-	var userName = $scope.myUsername;
-	var pwd = $scope.myPwd;
-	var flag = userName != undefined && pwd != undefined;
-	if(userName != "" && pwd != "" && flag){
-		alert("yes");
-	}
+app.controller('indexCtrl', function($scope, $http){
+	$scope.onSaveBlog = function(){
+		var blogData = CKEDITOR.instances.editor1.getData();
+		$http({
+			method: "post",
+			url:"submitBlog",
+			data: blogData
+		}).success(function(response){
+			
+		}).error(function(response){
+			
+		});
+	};
 });
