@@ -104,10 +104,17 @@ body{
     background-color: rgba(245, 245, 245, 0.8);
 }
 .index-content .blog-items li.item{
-	height: 300px;
+	height: 340px;
+	padding-top: 20px;
 }
 @media (min-width: 768px){
 	.navbar-right.my-nav-font.login{
 		margin-right: 15px;
+	}
+	.index-content .blog-items .item .thumbnail{
+	    height: 334px;
+	    margin: 0 60px;
+	    padding: 0;
+	    border: 0;
 	}
 }

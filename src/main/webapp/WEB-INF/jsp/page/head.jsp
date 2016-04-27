@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>My Personal Site</title>
 <link rel="icon" href="${pageContext.request.contextPath}/resources/imgs/siteicon3.jpg"/>
 
