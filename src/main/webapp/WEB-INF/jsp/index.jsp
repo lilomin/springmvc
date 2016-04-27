@@ -16,8 +16,14 @@
             </ul>
         </div>
     </div>
-    <!-- index page content -->
-    <c:import url="page/index-content.jsp"/>
+    <div data-ng-show="currentTab == 'HOME'">
+	    <!-- index page content -->
+	    <c:import url="page/content/index-content.jsp"/>
+    </div>
+    <div data-ng-show="currentTab == 'BLOGS'">
+	    <!-- blogs page content -->
+	    <c:import url="page/content/blogs-content.jsp"/>
+    </div>
     <!-- login-modal -->
     <c:import url="page/modals/loginModal.jsp"/>
     <!-- blog-modal -->
