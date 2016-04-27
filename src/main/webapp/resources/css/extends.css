@@ -103,6 +103,9 @@ body{
     width: 100%;
     background-color: rgba(245, 245, 245, 0.8);
 }
+.index-content .blog-items li.item{
+	height: 300px;
+}
 @media (min-width: 768px){
 	.navbar-right.my-nav-font.login{
 		margin-right: 15px;
