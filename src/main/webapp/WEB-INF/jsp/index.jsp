@@ -5,7 +5,7 @@
 <head>
 	<c:import url="page/head.jsp"></c:import>
 </head>
-<body>
+<body class="index-body-content">
 	<c:import url="page/header.jsp"></c:import>
 	<div class="bg-slider-wrapper">
         <div class="flexslider bg-slider">
