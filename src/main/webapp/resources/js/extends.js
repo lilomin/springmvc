@@ -1,6 +1,6 @@
 var app = angular.module('RaymondSite', []);
 
-app.controller('indexCtrl', function($scope, $http){
+app.controller('indexCtrl', function($scope, $http, $timeout){
 	$scope.navItems = ['HOME','BLOGS','WORKSAMPLE','CONTACT'];
 	$scope.currentTab = "HOME";
 	$scope.onNavItemClick = function(item){
@@ -13,7 +13,9 @@ app.controller('indexCtrl', function($scope, $http){
 			url:"submitBlog",
 			data: blogData
 		}).success(function(response){
-			
+			$timeout(function(){
+				$('#blogCloseIcon').trigger('click');
+			}, 100);
 		}).error(function(response){
 			
 		});
