@@ -5,13 +5,14 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.junit.Before;
+import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.perficient.pojo.User;
 import com.perficient.service.impl.UserServiceImpl;
 
-public class Test {
+public class UserTest {
 	private ApplicationContext ac = null;
 	
 	@Resource
@@ -23,13 +24,13 @@ public class Test {
 		userService = (UserServiceImpl) ac.getBean("UserService");
 	}
 	
-	@org.junit.Test
+	@Test
 	public void test1(){
 		User user = userService.getUser(1);
 		System.out.println(user.toString());
 	}
 	
-	@org.junit.Test
+	@Test
 	public void testGetAllUser(){
 		List<User> users = userService.getAllUsers();
 		System.out.println(users.size());
@@ -38,7 +39,7 @@ public class Test {
 		}
 	}
 	
-	@org.junit.Test
+	@Test
 	public void testGetUserByName(){
 		User user = userService.getUserByName("raymond");
 		System.out.println(user.toString());

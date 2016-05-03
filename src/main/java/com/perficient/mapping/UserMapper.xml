@@ -8,14 +8,14 @@
 	</resultMap>
 	
 	<select id="getAllUsers" resultMap="usersList">
-		SELECT * FROM user
+		SELECT * FROM users
 	</select>
 	
 	<select id="getUser" parameterType="int" resultType="com.perficient.pojo.User">
-		SELECT * FROM user WHERE id = #{userId}
+		SELECT * FROM users WHERE id = #{userId}
 	</select>
 	
 	<select id="getUserByName" parameterType="String" resultType="com.perficient.pojo.User">
-		SELECT * FROM user where name = #{name}
+		SELECT * FROM users where name = #{name}
 	</select>
 </mapper>
