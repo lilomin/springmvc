@@ -9,7 +9,9 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.perficient.pojo.Blog;
 import com.perficient.pojo.User;
+import com.perficient.service.BlogService;
 import com.perficient.service.impl.UserServiceImpl;
 
 public class UserTest {
@@ -17,11 +19,13 @@ public class UserTest {
 	
 	@Resource
 	private UserServiceImpl userService = null;
+	private BlogService blogService = null;
 	
 	@Before
 	public void before(){
 		ac = new ClassPathXmlApplicationContext("spring/applicationContext-servlet.xml");
 		userService = (UserServiceImpl) ac.getBean("UserService");
+		blogService = (BlogService) ac.getBean("BlogService");
 	}
 	
 	@Test
@@ -43,5 +47,14 @@ public class UserTest {
 	public void testGetUserByName(){
 		User user = userService.getUserByName("raymond");
 		System.out.println(user.toString());
+	}
+	
+	@Test
+	public void testGetAllBlog(){
+		List<Blog> blogs = blogService.getAllBlogs();
+		System.out.println(blogs.size());
+		for(Blog blog: blogs){
+			System.out.println(blog.toString());
+		}
 	}
 }

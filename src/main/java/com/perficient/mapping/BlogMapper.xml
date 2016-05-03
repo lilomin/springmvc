@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.perficient.dao.BlogMapper">
+	<resultMap type="com.perficient.pojo.Blog" id="blogList">
+		<id property="id" column="blog_id" />
+  		<result property="title" column="title"/>
+  		<result property="content" column="content"/>
+		<result property="submitDate" column="create_time"/>
+	</resultMap>
+	<select id="getAllBlogs" resultMap="blogList">
+		select * from blogs
+	</select>
+</mapper>
