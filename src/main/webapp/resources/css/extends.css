@@ -110,7 +110,7 @@ body{
     top: 315px;
     height: 1000px;
     width: 100%;
-    background-color: rgba(245, 245, 245, 0.8);
+    background-color: rgb(245, 245, 245);
 }
 .index-content .blog-items li.item{
 	height: 340px;
@@ -128,7 +128,7 @@ body.index-body-content{
 		margin-right: 15px;
 	}
 	.index-content .blog-items .item .thumbnail{
-	    height: 334px;
+	    height: 380px;
 	    margin: 0 60px;
 	    padding: 0;
 	    border: 0;
