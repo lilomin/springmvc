@@ -6,7 +6,7 @@ CREATE TABLE users (
 )ENGINE=InnoDB CHARSET=utf8
 CREATE TABLE blogs (
 	id int NOT NULL AUTO_INCREMENT,
-	tilte varchar(200) NOT NULL,
+	title varchar(200) NOT NULL,
 	content text DEFAULT NULL,
 	create_time DATE NOT NULL,
 	PRIMARY KEY (id)
