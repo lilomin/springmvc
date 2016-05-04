@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.json.JSONString;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +29,6 @@ public class BlogController {
 		try {
 			System.out.println("getAllBlogs");
 			blogList = blogService.getAllBlogs();
-			System.out.println("List:"+blogList.toString());
 			JSONArray blogArray = new JSONArray();
 			for(Blog blog: blogList){
 				JSONObject blogJson = new JSONObject(blog);
@@ -43,13 +43,16 @@ public class BlogController {
 	}
 	
 	@RequestMapping("/submitBlog")
-	private void getSubmitedBlog(@RequestBody String html, HttpServletResponse response){
+	private void getSubmitedBlog(@RequestBody String data, HttpServletResponse response){
 		try {
-			System.out.println("blog"+html);
-			response.setStatus(200);
+			System.out.println("add blog"+data);
+			JSONObject blogJSON = new JSONObject(data);
+			blogService.addBlog(blogJSON);
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
+		response.setStatus(200);
 		
 	}
 }

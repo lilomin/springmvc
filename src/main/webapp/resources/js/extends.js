@@ -16,7 +16,10 @@ app.controller('indexCtrl', function($scope, $http, $timeout){
 		}
 	};
 	$scope.onSaveBlog = function(){
-		var blogData = CKEDITOR.instances.editor1.getData();
+		var blogTitle = $scope.blogTitle;
+		var blogContent = CKEDITOR.instances.editor1.getData();
+		var date = new Date();
+		var blogData = {"content": blogContent, "title": blogTitle, "submitDate": date};
 		$http({
 			method: "post",
 			url:"submitBlog",

@@ -7,7 +7,12 @@
   		<result property="content" column="content"/>
 		<result property="submitDate" column="create_time"/>
 	</resultMap>
+	
 	<select id="getAllBlogs" resultMap="blogList">
 		select * from blogs
 	</select>
+	
+	<insert id="addBlog" parameterType="com.perficient.pojo.Blog">
+		insert into blogs (title, content, create_time) values (#{title}, #{content}, #{submitDate})
+	</insert>
 </mapper>
