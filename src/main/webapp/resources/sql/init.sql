@@ -11,9 +11,9 @@ CREATE TABLE blogs (
 	create_time DATE NOT NULL,
 	PRIMARY KEY (id)
 )ENGINE=InnoDB CHARSET=utf8
-CREATE TABLE commonts (
+CREATE TABLE comments (
 	id int NOT NULL AUTO_INCREMENT,
-	commont varchar(100) NOT NULL,
+	comment varchar(200) NOT NULL,
 	users_id int NOT NULL,
 	blogs_id int NOT NULL,
 	PRIMARY KEY (id),
