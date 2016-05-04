@@ -25,6 +25,8 @@ app.controller('indexCtrl', function($scope, $http, $timeout){
 			url:"submitBlog",
 			data: blogData
 		}).success(function(response){
+			$scope.blogs = null;
+			$scope.onNavItemClick('BLOGS');
 			$timeout(function(){
 				$('#blogCloseIcon').trigger('click');
 			}, 100);
