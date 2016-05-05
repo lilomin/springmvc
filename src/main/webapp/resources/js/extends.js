@@ -35,3 +35,27 @@ app.controller('indexCtrl', function($scope, $http, $timeout){
 		});
 	};
 });
+
+//JQuery
+//auto change the main navigation status when scrolling the screen.
+var isMobile = false;
+var isNavHasBorder = false;
+$(window).scroll(function(){
+	var screenWidth = $(window).width();
+	if(screenWidth < 767){
+		isMobile = true;
+	} else {
+		isMobile = false;
+	}
+	var scrollTop = $(window).scrollTop();
+	var navbar = $(".navbar .container-fluid");
+	if(scrollTop >= 270 && !isMobile && !isNavHasBorder){
+		navbar.addClass("navOnBorder");
+		navbar.hide();
+		navbar.slideDown();
+		isNavHasBorder = true;
+	} else if(scrollTop < 270){
+		navbar.removeClass("navOnBorder");
+		isNavHasBorder = false;
+	}
+});

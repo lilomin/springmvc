@@ -123,6 +123,11 @@ body{
 body.index-body-content{
 	overflow: auto;
 }
+.navOnBorder{
+	background-color: #247DA5;
+	border-radius: 3px;
+}
+
 @media (min-width: 768px){
 	.navbar-right.my-nav-font.login{
 		margin-right: 15px;
